@@ -1,3 +1,4 @@
+import css from './App.module.css';
 import { useState, useEffect } from 'react';
 import ContactList from '../ContactList/ContactList';
 import SearchBox from '../SearchBox/SearchBox';
@@ -33,7 +34,7 @@ function App() {
   const searchContacts = contacts.filter(contact => contact.name.toLowerCase().includes(filter.toLowerCase()));
 
   return (
-    <div>
+    <div className={css}>
       <h1>Phonebook</h1>
       <ContactForm addContact={addContact} />
       <SearchBox value={filter} onValue={setFilter} />
