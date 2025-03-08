@@ -1,0 +1,17 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid grey;
+  margin-bottom: 20px;
+  width: 300px;
+  padding: 40px 30px;
+}
+
+.field {
+  margin-bottom: 8px;
+}
+
+.err {
+  color: orangered;
+  margin-bottom: 8px;
+}

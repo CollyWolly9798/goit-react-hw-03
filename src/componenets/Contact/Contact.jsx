@@ -1,11 +1,14 @@
+import css from './Contact.module.css';
 export default function Contact({ info, deleteContact }) {
   return (
-    <div>
-      <ul>
+    <div className={css.wrap}>
+      <ul className={css.list}>
         <li>{info.name}</li>
         <li>{info.number}</li>
       </ul>
-      <button onClick={() => deleteContact(info.id)}>Delete</button>
+      <button className={css.btn} onClick={() => deleteContact(info.id)}>
+        Delete
+      </button>
     </div>
   );
 }

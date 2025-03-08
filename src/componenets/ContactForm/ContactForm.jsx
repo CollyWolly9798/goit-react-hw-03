@@ -1,3 +1,4 @@
+import css from './ContactForm.module.css';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { nanoid } from 'nanoid';
@@ -26,13 +27,13 @@ export default function ContactForm({ addContact }) {
 
   return (
     <Formik validationSchema={FeedbackSchema} initialValues={initialValues} onSubmit={handleSubmit}>
-      <Form>
+      <Form className={css.form}>
         <label htmlFor={nameFieldId}>Name</label>
-        <Field type='text' name='name' id={nameFieldId} />
-        <ErrorMessage name='name' component='span' />
+        <Field className={css.field} type='text' name='name' id={nameFieldId} />
+        <ErrorMessage className={css.err} name='name' component='span' />
         <label htmlFor={numberFieldId}>Number</label>
-        <Field type='text' name='number' id={numberFieldId} />
-        <ErrorMessage name='number' component='span' />
+        <Field className={css.field} type='text' name='number' id={numberFieldId} />
+        <ErrorMessage className={css.err} name='number' component='span' />
         <button type='submit'>Add contact</button>
       </Form>
     </Formik>
